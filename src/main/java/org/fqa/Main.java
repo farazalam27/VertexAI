@@ -19,8 +19,11 @@ public class Main {
     public static String generateContent(String modelId) {
         // Initialize client that will be used to send requests. This client only needs to be created
         // once, and can be reused for multiple requests.
+        // TODO(developer): Replace with your project ID
+        String projectId = "your-project-id";
         try (Client client =
                      Client.builder()
+                             .projectId(projectId)
                              .location("global")
                              .vertexAI(true)
                              .httpOptions(HttpOptions.builder().apiVersion("v1").build())
